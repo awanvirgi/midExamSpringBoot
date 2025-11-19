@@ -67,7 +67,7 @@ public class BookController {
         );
     }
 
-    @GetMapping("hightlighted/{id}")
+    @GetMapping("highlighted/{id}")
     public ResponseEntity<ResponseHighlight> finHighlightByOrderNumber(@PathVariable Integer id){
         return ResponseEntity.status(HttpStatus.OK).body(
                 highlightService.findByOrderNumber(id)

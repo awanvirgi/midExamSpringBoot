@@ -38,14 +38,14 @@ public class UserController {
         );
     }
 
-    @PatchMapping("{username}/active")
+    @PatchMapping("{username}/activate")
     public ResponseEntity<ResponseUser> setActivated(@PathVariable String username) {
         return ResponseEntity.status(HttpStatus.OK).body(
                 userService.setActivated(username)
         );
     }
 
-    @PatchMapping("{username}/deactive")
+    @PatchMapping("{username}/deactivate")
     public ResponseEntity<ResponseUser> setDeactivated(@PathVariable String username) {
         return ResponseEntity.status(HttpStatus.OK).body(
                 userService.setDeactivated(username)
